@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="32dp"
+        android:id="@+id/PT_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PT XYZ"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="8dp"/>
+    <ImageView
+        android:layout_marginLeft="32dp"
+        android:id="@+id/img_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location"
+        android:layout_below="@id/PT_name"
+        android:tint="@color/orange"
+        tools:ignore="UseAppTint" />
+    <TextView
+        android:id="@+id/name_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleman"
+        android:layout_below="@id/PT_name"
+        android:layout_toRightOf="@id/img_location"
+        android:layout_alignBottom="@id/img_location"/>
+    <RelativeLayout
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_location"
+        android:background="@drawable/border_background"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        >
+        <TextView
+            android:id="@+id/text_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi Perubahan Data Katalog"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+        <RelativeLayout
+            android:id="@+id/pembaruanTerakhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_info"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/text_pembaruan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Pembaruan Terakhir : "
+                />
+            <TextView
+                android:id="@+id/nama_pembaruan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@id/text_pembaruan"
+                android:text="16-06-2022 15:00:01"
+                android:textColor="@color/fontColor"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/kosong"/>
+            <RelativeLayout
+                android:id="@+id/pembaruanSelanjutnya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kosong"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/text_pembaruanSelanjutnya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Pembaruan Selanjutnya : "
+                    />
+                <TextView
+                    android:id="@+id/nama_pembaruanSelanjutnya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text_pembaruanSelanjutnya"
+                    android:text="17-06-2022 15:00:01"
+                    android:textColor="@color/fontColor"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/textDescription"/>
+    <!--Button bagian atas-->
+    <RelativeLayout
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space">
+
+        <RelativeLayout
+            android:id ="@+id/katalog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="32dp">
+            <ImageView
+                android:id="@+id/ImageKatalog"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/katalog"
+
+                android:layout_centerHorizontal="true"
+                android:tint="@color/orange"
+                android:elevation="5dp"
+                tools:ignore="UseAppTint" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ImageKatalog"
+                android:text="Katalog Tender"
+                android:elevation="5dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"/>
+            <Button
+                android:id="@+id/btn_katalog"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/button" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp">
+            <ImageView
+                android:id="@+id/ImageTender"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bookmark"
+                android:layout_centerHorizontal="true"
+                android:tint="@color/orange"
+                android:elevation="5dp"
+                tools:ignore="UseAppTint" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ImageTender"
+                android:text="Tender Tersimpan"
+                android:elevation="5dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"/>
+            <Button
+                android:id="@+id/tender"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/button"
+                android:contentDescription="Tender Tersimpan"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="32dp">
+
+        <RelativeLayout
+            android:id ="@+id/statistik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <ImageView
+                android:id="@+id/img_statistik"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/statistic"
+
+                android:layout_centerHorizontal="true"
+                android:tint="@color/orange"
+                android:elevation="5dp"
+                tools:ignore="UseAppTint" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_statistik"
+                android:text="Laporan Statistik"
+                android:elevation="5dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"/>
+            <Button
+                android:id="@+id/btn_statistik"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/button"
+                android:contentDescription="Laporan Statistik"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp">
+            <ImageView
+                android:id="@+id/img_pengaturan"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_settings_24"
+                android:layout_centerHorizontal="true"
+                android:tint="@color/orange"
+                android:elevation="5dp"
+                tools:ignore="UseAppTint" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_pengaturan"
+                android:text="Pengaturan"
+                android:elevation="5dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"/>
+            <Button
+                android:id="@+id/btn_setting"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/button"
+                android:contentDescription="Pengaturan"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
